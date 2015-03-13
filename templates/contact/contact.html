@@ -1,0 +1,26 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cms_tags %}
+
+{% block page_content_block %}
+{% static_placeholder 'main_image' %}
+<div itemscope itemtype="http://schema.org/LocalBusiness">
+	<div style='text-align:center;'>On your phone or skype?<br /><br /><span itemprop="telephone"><a class='btn btn-danger' href="tel:+{{ company_phone_link }}">Call Us Now</a></span>
+	<br /><br />
+	Or call us at <h4>{{ company_phone_text }}</h4>
+	</div>
+</div>
+<br />
+{% if contact_form %}
+<form role="form" method="post" style='width:80%; margin:0 auto;'>
+{% csrf_token %}
+{{ contact_form|crispy }}
+<button type="submit" name="contact" class="btn btn-primary">Send Message</button>
+</form>
+{% else %}
+<h2 style='text-align:center;'>Message received - we'll get in touch in the next 24 hours.</h2>
+<p>For now, have a look at some of the <a href='{% page_url 'features' %}'>features</a> we can integrate in to your website.</p>
+{% endif %}
+{% endblock page_content_block %}

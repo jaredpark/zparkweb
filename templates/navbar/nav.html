@@ -1,0 +1,23 @@
+{% load static %}
+{% load cms_tags %}
+
+<header class="navbar navbar-fixed-top custom-navbar" role="navigation">
+  <div class='navbar_top'></div>
+  <div class="container my_container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span style=''>Menu</span>
+      </button>
+      <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}"></a>
+    </div>
+    <nav class="navbar-collapse collapse custom-navbar theme-text" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ navbar_link1_name }}"> {{ navbar_link1_text }} </a><span class='caret_down'></span></li>
+        <li><a href="{{ navbar_link2_name }}"> {{ navbar_link2_text }} </a><span class='caret_down'></span></li>
+        <li><a href="{{ navbar_link3_name }}"> {{ navbar_link3_text }} </a><span class='caret_down'></span></li>
+        <li><a href="{{ navbar_link4_name }}"> {{ navbar_link4_text }} </a><span class='caret_down'></span></li>
+      </ul>
+    </nav>
+  </div>
+</header>

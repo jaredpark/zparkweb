@@ -1,0 +1,42 @@
+{% load static %}
+{% load cms_tags %}
+
+<div class='container-fluid homepage_content theme-bg theme-text'>
+	{% if first_name %}
+	<h4><em>Welcome {{ first_name }}!</em></h4>
+	{% endif %}
+	<div>
+		<h3>{{ homepage_content_top }}</h3><h4><em>{{ homepage_content_quote }}</em> - {{ homepage_content_quote_name }}</h4>
+	</div>
+	<div class='container-fluid homepage_column_wrapper theme-text homepage-text'>
+		<div class='col-md-4'>
+			{% if img1_is_popup %}
+			{# <a href='{% url img1_link_name %}' onclick="return popup(this, 'notes')"> #}
+			{% else %}
+			{# <a href='{% url img1_link_name %}'> #}
+			{% endif %}
+				<h5>{{ img1_title }}</h5>
+				<img class='circular' src='{% static img1_file %}' alt='{{ img1_alt }}'></img>
+				<p>{{ img1_text }}</p>
+			</a>
+		</div>
+		<div class='col-md-4'>
+			{% if img2_is_modal %}
+			<a href='{{ url img2_link_name }}' data-toggle='modal'>
+			{% else %}
+			<a href='{% url img2_link_name %}'>
+			{% endif %}
+				<h5>{{ img2_title }}</h5>
+				<img class='circular' src='{% static img2_file %}' alt='{{ img2_alt }}'></img>
+				<p>{{ img2_text }}</p>
+			</a>
+		</div>
+		<div class='col-md-4'>
+			<a href='{% url img3_link_name %}'>
+				<h5>{{ img3_title }}</h5>
+				<img class='circular' src='{% static img3_file %}' alt='{{ img3_alt }}'></img>
+				<p>{{ img3_text }}</p>
+			</a>
+		</div>
+	</div>
+</div>

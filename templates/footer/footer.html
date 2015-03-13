@@ -1,0 +1,20 @@
+{% load static %}
+{% load cms_tags %}
+
+<footer id='footer' class=" navbar-bottom" role="navigation">
+  <div class="footer_wrapper" style='background: url("static/images/crosshatch.jpg");'>
+    <div class='footer_content' style='background: url("static/images/para_diag.jpg");'>
+      <div class='my_container'>
+        <div class='col-sm-4' style='padding-left:0'>
+          <a class='custom-logo' href="{% page_url 'home' %}"><img src="{% static logo_file_name %}"></a>
+        </div>
+        <div class='col-sm-4 footer_social'>
+          {% include 'misc_pages/social_links.html' %}
+        </div>
+        <div class='col-sm-4 footer_copyright'>
+          <p>&copy; 2015, ZparkWeb LLC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

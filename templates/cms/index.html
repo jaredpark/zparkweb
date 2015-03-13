@@ -1,0 +1,8 @@
+{% extends "cms/base.html" %}
+{% load cms_tags %}
+
+{% block body_block %}
+  {% include 'homepage/homepage_image.html' %}
+  {% include 'homepage/homepage_content.html' %}
+  {% placeholder homepage_content %}
+{% endblock %}

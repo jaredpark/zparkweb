@@ -1,0 +1,9 @@
+<h3>{{ instance.poll.question }}</h3>
+<form action="{% url 'polls_vote' instance.poll.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in instance.poll.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+        <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+    {% endfor %}
+    <input type="submit" value="Vote" />
+</form>

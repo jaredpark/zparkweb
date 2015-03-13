@@ -1,0 +1,12 @@
+{% extends 'cms/base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block body_block %}
+{% include 'homepage/hero.html' %}
+{% include 'homepage/portfolio.html' %}
+{% include 'homepage/services.html' %}
+{% include 'homepage/about.html' %}
+{% include 'homepage/contact.html' %}
+{% endblock body_block %}

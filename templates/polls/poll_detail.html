@@ -1,0 +1,23 @@
+{% extends "extend_templates/info_page.html" %}
+
+{% load i18n %}
+{% load polls %}
+
+{% block page_content_block %}
+<h1>{{poll.question}}</h1>
+{% if poll.votable %}
+<form action="{% url 'polls_vote' poll.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in poll.choice_set.all %}
+    <label class="radio"><input type="radio" name="choice_pk" value="{{choice.id}}">{{choice.choice}}</label>
+    {% endfor %}
+    <input type="submit" class="btn btn-primary" value="{% trans "Vote" %}">
+</form>
+{% else %}
+<ul>
+{% for choice in poll.choice_set.all %}
+    <li>{{choice.choice}}: {{choice.count_votes}} vote{% if choice.count_votes > 1 or choice.count_votes == 0 %}s{% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
