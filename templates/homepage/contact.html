@@ -3,18 +3,18 @@
 {% load crispy_forms_tags %}
 
 <a name="contact"></a>
-<div id='contact' class='container-fluid shadow' style='background-image: url("static/images/crosshatch.jpg")'>
+<div id='contact' class='shadow'>
 	<div class='container my_container'>
 		{% if name %}
-			<div class='img-responsive' style='background: url("{% static 'images/Computer-Nerd.png' %}") center center no-repeat; width:100%; height:400px;'>
+			<div class='message_sent_redirect'>
 				<div style='color:#ddd; padding: 30px 0;'><p style='font-size: 24px; font-style:italic'>Sweet!</p><p style='font-size:18px'>Talk to you soon {{ name }}</p></div>
 			</div>
 		{% else %}
-		<span class='transition'>/</span><h3>Get in touch to schedule a free consultation</h3>
+		<div class='transition_bar'><div class='transition_box'></div><h3>Get in touch to schedule a free consultation</h3></div>
 		<div id='contact_content'>
-			<div class='col-sm-4'>
+			<div class='col one_quarter_col'>
 				<div class='contact_item'>
-					<h4>ZparkWeb Design & Development</h4>
+					<h4>ZparkWeb</h4>
 					<p>1930 E Palmcroft Dr</p>
 					<p>Tempe, AZ 85282</p>
 					<p class='phone'>(602) 429-9029</p>
@@ -29,7 +29,7 @@
 					<p class='support_email'>support@ZparkWeb.com</p>
 				</div>
 			</div>
-			<div class='col-sm-7'>
+			<div class='col three_quarter_col'>
 				<form role='form' method='post' class='contact_form' action='#contact'>
 					{% csrf_token %}
 					<div class="form_icon form_name {% if 'name' in error_fields %}error_field{% endif %}" style='background: url("static/images/person_icon.png") no-repeat'></div>

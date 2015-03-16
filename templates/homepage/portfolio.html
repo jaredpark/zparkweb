@@ -2,17 +2,17 @@
 {% load cms_tags %}
 
 <a name="portfolio"></a>
-<div class='break_style_1' style='background-image: url("static/images/para_diag.jpg")'></div>
+<div class='break_style_1'></div>
 <div id='portfolio' class='container my_container'>    
-	<div id='portfolio_left' class='col-sm-3 no_pad'>
-		<span class='transition'>/</span><h3>Portfolio</h3>
-		<ul id='portfolio_nav' class='nav nav-pills nav-stacked' role='tablist'>
-			<li role='presentation' class='active'><a data-toggle="tab" href="#portfolio_work" style='background-image: url("static/images/para_diag.jpg")'>WORK</a><img class="mycaret" src="{% static 'images/caret.png' %}" alt="caret" style="display: block;"></li>
-			<li data-toggle="tab" role='presentation'><a data-toggle="tab" href="#portfolio_integration" style='background-image: url("static/images/para_diag.jpg")'>INTEGRATIONS</a><img class="mycaret" src="{% static 'images/caret.png' %}" alt="caret" style="display: block;"></li>
-			<li data-toggle="tab" role='presentation' class='last'><a data-toggle="tab" href="#portfolio_revenue" style='background-image: url("static/images/para_diag.jpg")'>YOUR REVENUE</a><img id="caret-5" class="mycaret" src="{% static 'images/caret.png' %}" alt="caret" style="display: block;"></li>
+	<div id='portfolio_left' class='col one_quarter_col'>
+		<div class='transition_bar'><div class='transition_box'></div><h3>Portfolio</h3></div>
+		<ul id='portfolio_nav' class='nav nav-pills' role='tablist'>
+			<li role='presentation' class='active'><a data-toggle="tab" href="#portfolio_work">WORK</a><img class="mycaret" src="{% static 'images/caret.png' %}" alt="caret" style="display: block;"></li>
+			<li data-toggle="tab" role='presentation'><a data-toggle="tab" href="#portfolio_integration">INTEGRATIONS</a><img class="mycaret" src="{% static 'images/caret.png' %}" alt="caret" style="display: block;"></li>
+			<li data-toggle="tab" role='presentation' class='last'><a data-toggle="tab" href="#portfolio_revenue">YOUR REVENUE</a><img id="caret-5" class="mycaret" src="{% static 'images/caret.png' %}" alt="caret" style="display: block;"></li>
 		</ul>
 	</div>
-	<div id='portfolio_right' class='tab-content col-sm-9 no_pad'>
+	<div id='portfolio_right' class='tab-content col three_quarter_col'>
 		<div role='tabpanel' class='tab-pane active fade in' id='portfolio_work'>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner" role="listbox">

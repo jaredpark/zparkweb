@@ -3,8 +3,7 @@ def site_settings_processor(request):
 		# 'root_url': 'jpark.pythonanywhere.com',
 		'root_url': '127.0.0.1:8000',
 		'admin_name': 'superuser',
-		'company_name': 'Personal WebIT',
-		'footer_copyright': 'Personal WebIT, 2014',
+		'company_name': 'ZparkWeb Design & Development',
 		'logo_file_name': 'images/logo.png',
 		'site_email': 'jaredjamespark@gmail.com',
 		# if email changes, update misc_pages/email.html
@@ -12,7 +11,7 @@ def site_settings_processor(request):
 		'company_phone_link': '16024299029',
 		'yelp_id': 'barefoot-pools-pool-service-and-repair-phoenix',
 		'editable_profile_field_label_list': ['image', 'address', 'city', 'zipcode', 'phone'],
-		'meta_content': 'Web design with an emphasis on mobile compatibility and data-driven processes.',
+		'meta_content': 'ZparkWeb builds and designs meaningful web based business solutions. We build websites, web applications and execute data-driven pay-per-click campaigns.',
 		'meta_keywords': 'Web design, website design, web hosting, internet host',
 		'navbar_link1_name': '#portfolio',
 		'navbar_link1_text': 'PORTFOLIO',
