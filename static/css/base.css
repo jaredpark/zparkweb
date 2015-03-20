@@ -465,25 +465,6 @@ textarea:focus, input:focus{
 @media (max-width: 480px){
 
 	.hero {
-		height: 337px;
-		background: url("../images/computer_nerds_767.jpg") center 30px no-repeat;
-	}
-
-	.hero_btn {
-		font-size: 1.5em;
-		padding: 25px 30px;
-		top: 325px;
-		left: 44%;
-	}
-
-	.about_hero {
-		background: none;
-		height: 50px;
-	}
-}
-
-@media (max-width: 480px) {
-	.hero {
 		height: 430px;
 		background: url("../images/looking_up_sm.jpg") center 30px no-repeat;
 	}
@@ -497,12 +478,17 @@ textarea:focus, input:focus{
 		width: 180px;
 		text-align: center;
 	}
+
+	.about_hero {
+		background: none;
+		height: 0px;
+	}
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
 	.hero {
 		height: 337px;
-		background: url("../images/computer_nerds_767.jpg") center 30px no-repeat;
+		background: url("../images/computer_nerds_767_final.jpg") center 30px no-repeat;
 	}
 
 	.hero_btn {
@@ -513,9 +499,9 @@ textarea:focus, input:focus{
 	}
 
 	.about_hero {
-		background: url("../images/computer_nerds.jpg") -500px -80px no-repeat;
-		height: 440px;
-		margin-top: 0;
+		background: none;
+		height: 0;
+		margin: 0;
 	}
 }
 
@@ -743,6 +729,10 @@ textarea:focus, input:focus{
 	#about {
 		margin-bottom: 40px;
 		padding-top: 60px;
+	}
+
+	#about_content {
+		margin-top: 20px;
 	}
 
 	#about_content h4 {
@@ -984,12 +974,10 @@ textarea:focus, input:focus{
 		margin-bottom: 40px;
 	}
 
-	
 	.about_hero {
-		background: url("../images/Computer-Nerd.png") top center no-repeat;
-		width:100%;
-		min-height:550px;
-		margin-top:-210px;
+		background: none;
+		min-height:0;
+		margin: 0;
 	}
 
 	#about_content h4 {
@@ -1029,14 +1017,14 @@ textarea:focus, input:focus{
 @media (min-width: 768px) and (max-width: 1280px){
 
 	.hero {
-		height: 500px;
-		background: url("../images/computer_nerds_1280.jpg") center center no-repeat;
+		height: 519px;
+		background: url("../images/computer_nerds_1280_final.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
 		font-size: 1.5em;
 		padding: 25px 30px;
-		top: 220px;
+		top: 240px;
 		left: 40%;
 	}
 }
@@ -1044,8 +1032,8 @@ textarea:focus, input:focus{
 @media (min-width: 1281px) and (max-width:1600px) {
 
 	.hero {
-		height: 600px;
-		background: url("../images/computer_nerds_1600.jpg") center center no-repeat;
+		height: 620px;
+		background: url("../images/computer_nerds_1600_final.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
@@ -1059,8 +1047,8 @@ textarea:focus, input:focus{
 @media (min-width: 1601px) and (max-width:1920px){
 	
 	.hero {
-		height: 600px;
-		background: url("../images/computer_nerds_1920.jpg") center center no-repeat;
+		height: 620px;
+		background: url("../images/computer_nerds_1920_final.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
@@ -1074,8 +1062,8 @@ textarea:focus, input:focus{
 @media (min-width: 1921px){
 
 	.hero {
-		height: 714px;
-		background: url("../images/computer_nerds_xl.jpg") center center no-repeat;
+		height: 734px;
+		background: url("../images/computer_nerds_xl_final.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
