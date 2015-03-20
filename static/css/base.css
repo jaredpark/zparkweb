@@ -50,13 +50,6 @@ input:-webkit-autofill:focus {
 	color: #ee4b39!important;
 }
 
-.break_style_1 {
-	height: 30px;
-	margin-top: -4px;
-	border-bottom: 1px solid #ccc;
-	background-image: url("../images/para_diag.jpg");
-}
-
 .caret_down {
   width: 0;
   height: 0;
@@ -166,7 +159,7 @@ textarea:focus, input:focus{
 }
 
 .navbar .custom-logo img {
-	margin-top: 11px;
+	margin: 11px 0 0;
 }
 
 .navbar ul li a {
@@ -193,30 +186,9 @@ textarea:focus, input:focus{
 
 .hero {
 	margin-top: 68px;
-	background: url("../images/this_is_going_too_far_tablet.jpg") -50px top no-repeat;
-	width:100%;
-	height: 300px;
-	text-align: center;
-}
-
-.hero:after {
-	background: url("../images/this_is_going_too_far_tablet_repeat.jpg") repeat-x scroll center top rgba(0, 0, 0, 0);
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	height: 1000px;
-	width: 100%;
-	z-index: -1;
 }
 
 .hero_btn {
-	font-size: 1em;
-	padding: 15px 20px;
-	position: absolute;
-	top: 230px;
-	left: 30%;
 	position: absolute;
 	background: #c3cf21;
 	color: #000;
@@ -491,21 +463,70 @@ textarea:focus, input:focus{
 
 
 @media (max-width: 480px){
+
+	.hero {
+		height: 337px;
+		background: url("../images/computer_nerds_767.jpg") center 30px no-repeat;
+	}
+
+	.hero_btn {
+		font-size: 1.5em;
+		padding: 25px 30px;
+		top: 325px;
+		left: 44%;
+	}
+
 	.about_hero {
 		background: none;
 		height: 50px;
 	}
 }
 
+@media (max-width: 480px) {
+	.hero {
+		height: 430px;
+		background: url("../images/looking_up_sm.jpg") center 30px no-repeat;
+	}
+
+	.hero_btn {
+		position:initial;
+		font-size: 1.0em;
+		padding: 15px 0;
+		margin: 140px auto 0;
+		display: block;
+		width: 180px;
+		text-align: center;
+	}
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
+	.hero {
+		height: 337px;
+		background: url("../images/computer_nerds_767.jpg") center 30px no-repeat;
+	}
+
+	.hero_btn {
+		font-size: 1.1em;
+		padding: 15px 20px;
+		top: 165px;
+		left: 38%;
+	}
+
 	.about_hero {
-		background: url("../images/Computer-Nerd.png") -500px -80px no-repeat;
+		background: url("../images/computer_nerds.jpg") -500px -80px no-repeat;
 		height: 440px;
 		margin-top: 0;
 	}
 }
 
 @media (max-width: 767px) {
+
+	.break_style_1 {
+		height: 30px;
+		margin-top: -7px;
+		border-bottom: 1px solid #ccc;
+		background-image: url("../images/para_diag.jpg");
+	}
 
 	.my_container {
 		width: 100%;
@@ -571,6 +592,12 @@ textarea:focus, input:focus{
 
 	.mycaret {
 		display: none!important;
+	}
+
+/* navbar */
+
+	.navbar .custom-logo img {
+		margin: 10px 0 0 10px;
 	}
 
 	/* portfolio */
@@ -824,6 +851,8 @@ textarea:focus, input:focus{
 	.break_style_1 {
 		height: 16px;
 		border-bottom: 1px solid #ddd;
+		background-image: url("../images/para_diag.jpg");
+		margin-top: -4px;
 	}
 
 	.transition_bar {
@@ -989,32 +1018,70 @@ textarea:focus, input:focus{
 		font-weight: 300;
 	}
 
-}
+/* contact*/
 
-@media (min-width: 768px) and (max-width: 1023px){
-	.hero {
-		margin-top: 68px;
-		background: url("../images/this_is_going_too_far_tablet.jpg") center top no-repeat;
-		width:100%;
-		height: 300px;
-		text-align: center;
-	}
-}
-
-@media (min-width: 1024px){
 	#contact_content p {
 		font-size: 13px;
 	}
 
+}
+
+@media (min-width: 768px) and (max-width: 1280px){
+
 	.hero {
-		height: 600px;
-		background: url("../images/this_is_going_too_far.jpg") center top no-repeat;
+		height: 500px;
+		background: url("../images/computer_nerds_1280.jpg") center center no-repeat;
 	}
 
 	.hero_btn {
 		font-size: 1.5em;
 		padding: 25px 30px;
-		top: 500px;
-		left: 25%;
+		top: 220px;
+		left: 40%;
+	}
+}
+
+@media (min-width: 1281px) and (max-width:1600px) {
+
+	.hero {
+		height: 600px;
+		background: url("../images/computer_nerds_1600.jpg") center center no-repeat;
+	}
+
+	.hero_btn {
+		font-size: 1.5em;
+		padding: 25px 30px;
+		top: 270px;
+		left: 43%;
+	}
+}
+
+@media (min-width: 1601px) and (max-width:1920px){
+	
+	.hero {
+		height: 600px;
+		background: url("../images/computer_nerds_1920.jpg") center center no-repeat;
+	}
+
+	.hero_btn {
+		font-size: 1.5em;
+		padding: 25px 30px;
+		top: 325px;
+		left: 44%;
+	}
+}
+
+@media (min-width: 1921px){
+
+	.hero {
+		height: 714px;
+		background: url("../images/computer_nerds_xl.jpg") center center no-repeat;
+	}
+
+	.hero_btn {
+		font-size: 1.5em;
+		padding: 35px 40px;
+		top: 450px;
+		left: 46%;
 	}
 }
