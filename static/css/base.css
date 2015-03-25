@@ -204,7 +204,7 @@ textarea:focus, input:focus{
 
 /*  Portfolio */
 
-#portfolio_nav {
+#portfolio #portfolio_nav {
 	margin: 60px auto 0;
 }
 
@@ -275,6 +275,7 @@ textarea:focus, input:focus{
 	line-height: 1.5;
 	font-family: 'Noto Sans';
 	font-weight: 100;
+	margin-top: 10px;
 }
 
 #portfolio #integration_nav .showcase_col p, #portfolio #integration_nav .showcase_col ul, #portfolio #revenue_nav .showcase_col p, #portfolio #revenue_nav .showcase_col ul {
