@@ -327,9 +327,8 @@ textarea:focus, input:focus{
 	font-weight: 300;
 }
 
-#contact_content p {
+#contact_content p, #contact_content a {
 	color: #7E93A6;
-	font-size: 11px;
 	margin: 0 0 0px;
 }
 
@@ -627,8 +626,16 @@ textarea:focus, input:focus{
 		margin: 0;
 	}
 
-	#portfolio_nav {
+	#portfolio_right {
+		margin-top: 20px;
+	}
+
+	#portfolio #portfolio_nav {
 		margin: -35px 0 0 120px;
+	}
+
+	#portfolio_right .tab-pane img {
+		max-width:80%;
 	}
 
 	#portfolio .nav-pills li {
@@ -658,6 +665,10 @@ textarea:focus, input:focus{
 		height: 50px;
 		background: none!important;
 		color: #001931;
+	}
+
+	#portfolio .showcase_subtitle {
+		margin-top: 15px;
 	}
 
 	/* services */

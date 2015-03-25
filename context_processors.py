@@ -7,7 +7,7 @@ def site_settings_processor(request):
 		'logo_file_name': 'images/surgesite_logo.png',
 		'site_email': 'jaredjamespark@gmail.com',
 		# if email changes, update misc_pages/email.html
-		'company_phone_text': '602-429-9029',
+		'company_phone_text': '(&#054;&#048;&#050;)&#052;&#050;&#057;&#045;&#057;&#048;&#050;&#057;',
 		'company_phone_link': '16024299029',
 		'yelp_id': 'barefoot-pools-pool-service-and-repair-phoenix',
 		'editable_profile_field_label_list': ['image', 'address', 'city', 'zipcode', 'phone'],
