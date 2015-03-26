@@ -117,7 +117,12 @@ input:-webkit-autofill:focus {
 }
 
 .custom-logo img {
-	max-width: 180px;
+	max-width: 140px;
+}
+
+.nav_logo_seo {
+	font-size: 9px;
+	margin: 0 0 0 1px;
 }
 
 /* modifiers*/
@@ -428,9 +433,20 @@ textarea:focus, input:focus{
   background-image: linear-gradient(to bottom, #a7b023 0%, #a2ab21 100%);*/
 }
 
-#contact .name_field {
-	background: url("static/images/person_icon.png") no-repeat;
-	
+.form_icon.form_name {
+	background: url("../images/person_icon.png") no-repeat;	
+}
+
+.form_icon.form_email {
+	background: url("../images/at_icon.png") no-repeat;	
+}
+
+.form_icon.form_phone {
+	background: url("../images/phone_icon.png") no-repeat;	
+}
+
+.form_icon.form_message {
+	background: url("../images/question_icon.png") no-repeat;	
 }
 
 /* Footer */

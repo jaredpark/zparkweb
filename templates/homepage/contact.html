@@ -6,8 +6,8 @@
 <div id='contact' class='shadow'>
 	<div class='container my_container'>
 		{% if name %}
-			<div class='message_sent_redirect'>
-				<div style='color:#ddd; padding: 30px 0;'><p style='font-size: 24px; font-style:italic'>Sweet!</p><p style='font-size:18px'>Talk to you soon {{ name }}</p></div>
+			<div class='message_sent_redirect' title="We're happy to hear from you">
+				<div style='color:#ddd; padding: 30px 0;'><p style='font-size: 24px; font-style:italic'>Thanks!</p><p style='font-size:18px'>Talk to you soon {{ name }}</p></div>
 			</div>
 		{% else %}
 		<div class='transition_bar'><div class='transition_box'></div><h3>Get in touch to schedule a free consultation</h3></div>
@@ -32,20 +32,20 @@
 			<div class='col three_quarter_col'>
 				<form role='form' method='post' class='contact_form' action='#contact'>
 					{% csrf_token %}
-					<div class="form_icon form_name {% if 'name' in error_fields %}error_field{% endif %}" style='background: url("static/images/person_icon.png") no-repeat'></div>
-					<div class="{% if 'name' in error_fields %}error_field{% endif %}">
+					<div class="form_icon form_name {% if 'name' in error_fields %}error_field{% endif %}"></div>
+					<div class="{% if 'name' in error_fields %}error_field{% endif %}" title='name icon'>
 						<input for='id_name' name="name" placeholder='{{ name_placeholder }}' type="text" value='{{ name_value }}'>
 					</div>
-					<div class="form_icon form_email" style='background : url("static/images/at_icon.png") no-repeat'></div>
-					<div class="{% if 'email' in error_fields %}error_field{% endif %}">
+					<div class="form_icon form_email"></div>
+					<div class="{% if 'email' in error_fields %}error_field{% endif %}" title='email icon'>
 						<input for='id_email' name="email" placeholder="{{ email_placeholder }}" type="email" value='{{ email_value }}'>
 					</div>
-					<div class="form_icon form_phone" style='background: url("static/images/phone_icon.png") no-repeat'></div>
-					<div class="{% if 'phone' in error_fields %}error_field{% endif %}">
+					<div class="form_icon form_phone"></div>
+					<div class="{% if 'phone' in error_fields %}error_field{% endif %}" title='phone icon'>
 						<input for='id_phone' name="phone" placeholder="{{ phone_placeholder }}" type="text" value='{{ phone_value }}'>
 					</div>
-					<div class="form_icon form_message" style='background: url("static/images/question_icon.png") no-repeat'></div>
-					<div class="{% if 'message' in error_fields %}error_field{% endif %}">
+					<div class="form_icon form_message"></div>
+					<div class="{% if 'message' in error_fields %}error_field{% endif %}" title='message icon'>
 						<input for='id_message' maxlength="400" name="message" placeholder="{{ message_placeholder }}" type="text" value='{{ message_value }}'>
 					</div>
 					<button type="submit" name="contact" class="btn">Send</button>
