@@ -1,16 +1,13 @@
 def site_settings_processor(request):
 	context_dictionary = {
-		# 'root_url': 'jpark.pythonanywhere.com',
-		'root_url': '127.0.0.1:8000',
+		'root_url': 'www.SurgeSite.com',
 		'admin_name': 'superuser',
 		'company_name': 'SurgeSite Web Design & Development',
 		'logo_file_name': 'images/surgesite_logo.png',
-		'site_email': 'jaredjamespark@gmail.com',
-		# if email changes, update misc_pages/email.html
-		'company_phone_text': '(&#054;&#048;&#050;)&#052;&#050;&#057;&#045;&#057;&#048;&#050;&#057;',
+		'site_email': 'contact@SurgeSite.com',
+		# !!!! important !!!! contact.html has ascii email addresses, must edit those manually
+		'company_phone_text': '',
 		'company_phone_link': '16024299029',
-		'yelp_id': 'barefoot-pools-pool-service-and-repair-phoenix',
-		'editable_profile_field_label_list': ['image', 'address', 'city', 'zipcode', 'phone'],
 		'meta_content': 'SurgeSite develops and designs meaningful web based business solutions. We build websites, web applications and execute data-driven pay-per-click campaigns.',
 		'navbar_link1_name': '#portfolio',
 		'navbar_link1_text': 'PORTFOLIO',
