@@ -145,6 +145,7 @@ textarea:focus, input:focus{
 
 .menu_toggle_text {
 	color: #fff;
+	font-weight: 300;
 }
 
 .navbar-toggle {
@@ -192,7 +193,7 @@ textarea:focus, input:focus{
 	margin-top: 68px;
 }
 
-.hero_btn, .contact_form button {
+.hero_btn, .contact_form button, .call_me_now_button {
 	position: absolute;
 	background: #2792f2;
 	color: #ddd;
@@ -201,10 +202,22 @@ textarea:focus, input:focus{
 	z-index: 100;
 }
 
-.hero_btn:hover, .contact_form button:hover {
+.hero_btn:hover, .contact_form button:hover, .call_me_now_button:hover {
 	background: #0570d0;
 	text-decoration: none;
 	color: #ddd;
+}
+
+.call_me_now_button {
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	height: 40px;
+	width: 120px;
+	margin: 0 auto;
+	padding: 12px 0;
+	text-align: center;
+	display:none;
 }
 
 /*  Portfolio */
@@ -505,6 +518,10 @@ textarea:focus, input:focus{
 		background: none;
 		height: 0px;
 	}
+
+	.call_me_now_button {
+		display:block;
+	}
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -606,6 +623,10 @@ textarea:focus, input:focus{
 
 	.navbar .custom-logo img {
 		margin: 5px 0 0 10px;
+	}
+
+	.nav_logo_seo {
+		margin-left: 10px;
 	}
 
 	.navbar ul li {
