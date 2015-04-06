@@ -4,8 +4,6 @@ from django.utils.translation import ugettext_lazy as _
 from registration.signals import user_registered
 from datetime import datetime
 
-from django.forms import ModelForm
-
 from django_facebook.models import FacebookProfileModel
 
 from cms.models.fields import PlaceholderField

@@ -1,0 +1,29 @@
+{% extends "cms/base.html" %}
+{% load cms_tags %}
+{% load static %}
+
+{% block body_block %}
+
+<div class='blog_home_wrapper'>
+	<div class='runner'>
+		<div class='container my_container'>
+			<div class='transition_bar'><div class='transition_box'></div><h3>Things to know about your website</h3></div>
+		</div>
+	</div>
+	<div class='blog_home_contents container my_container'>
+		{% for post in blog_list %}
+		<div class='blog_home_article'>
+			<a href='/blog/{{ post.slug }}'>
+				<div class='blog_home_post_image' style='background: url("/media/{{ post.main_image }}") center center no-repeat'></div>
+			</a>
+			<h1 class='article_title'>{{ post.title }}</h1>
+			<p class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} - {{ post.created_on }}</p>
+			<span class='tease_text'>{{ post.tease | safe }}</span>
+			<a href='/blog/{{ post.slug }}' class="article_continue_button">Continue reading</a>
+		</div>
+		{% endfor %}
+		<div style='height:40px'></div>
+	</div>
+</div>
+
+{% endblock %}

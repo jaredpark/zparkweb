@@ -86,7 +86,7 @@ TEMPLATE_DIRS = [
 #django-cms req's
 CMS_TEMPLATES = (
     ('cms/template_1.html', gettext('Template One')),
-    ('cms/index.html', gettext('Index')),
+    ('cms/blog_home.html', gettext('Blog Home Page')),
     ('cms/base_sidebar_left.html', gettext('Base Sidebar L')),
     ('cms/base_sidebar_both.html', gettext('Base Sidebar L+R')),
     ('cms/base_sidebar_left_pills.html', gettext('Base Sidebar L Pills')),
@@ -144,7 +144,13 @@ THIRD_PARTY_APPS = (
 )
 
 CKEDITOR_SETTINGS = {
-    'autoParagraph': False
+    'autoParagraph': False,
+    'toolbar_HTMLField': [
+        ['Undo', 'Redo'],
+        ['ImagePlugin', '-', 'ShowBlocks'],
+        ['Format', 'Styles'],
+        ['Bold', 'Italic', 'Underline', '-', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+    ],
 }
 
 THUMBNAIL_HIGH_RESOLUTION = True
@@ -162,6 +168,7 @@ LOCAL_APPS = (
     'myQuotes',
     'homepage',
     'contact',
+    'myBlog',
 )
 
 INSTALLED_APPS = THIRD_PARTY_APPS + LOCAL_APPS + DEFAULT_APPS

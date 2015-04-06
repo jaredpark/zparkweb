@@ -8,14 +8,16 @@ def site_settings_processor(request):
 		# !!!! important !!!! contact.html has ascii email addresses, must edit those manually
 		'company_phone_text': '',
 		'company_phone_link': '16024299029',
-		'meta_content': 'SurgeSite develops and designs meaningful web based business solutions. We build and maintain websites, web applications and data-driven pay-per-click campaigns.',
-		'navbar_link1_name': '#portfolio',
+		'meta_content': 'SurgeSite develops and designs web business solutions. We hand-code and maintain websites with continuing content and marketing services.',
+		'navbar_link1_name': '/#portfolio',
 		'navbar_link1_text': 'PORTFOLIO',
-		'navbar_link2_name': '#services',
+		'navbar_link2_name': '/#services',
 		'navbar_link2_text': 'SERVICES',
-		'navbar_link3_name': '#about',
+		'navbar_link3_name': '/#about',
 		'navbar_link3_text': 'ABOUT',
-		'navbar_link4_name': '#contact',
-		'navbar_link4_text': 'CONTACT',
+		'navbar_link4_name': '/blog',
+		'navbar_link4_text': 'BLOG',
+		'navbar_link5_name': '/#contact',
+		'navbar_link5_text': 'CONTACT',
 	}
 	return(context_dictionary)

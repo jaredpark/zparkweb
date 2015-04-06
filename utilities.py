@@ -12,6 +12,10 @@ def admin_name():
 def project_name():
     return site_settings_processor(None)['project_name']
 
+def slug_it(string_to_slug):
+	slug = re.sub(' ', '-', string_to_slug)
+	return(slug)
+
 is_production = os.environ.get('IS_PRODUCTION')
 
 def CouponFormProcessor(request, context_dictionary):
