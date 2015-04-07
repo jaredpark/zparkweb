@@ -1,9 +1,7 @@
-# Created by https://www.gitignore.io
-
-### Django ###
 *.log
-*.pot
 *.pyc
+*.pot
 __pycache__/
-local_settings.py
-setting_dev.py
+/settings_dev.py
+local_static/
+webdesign/settings.py
