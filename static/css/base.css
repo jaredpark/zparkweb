@@ -153,14 +153,6 @@ input:-webkit-autofill:focus {
 	display:none;
 }
 
-.article_continue_button {
-	right: 100px;
-	bottom: 30px;
-	padding: 16px 0px;
-	width: 168px;
-	text-align:center;
-}
-
 .nav_logo_seo {
 	font-size: 9px;
 	margin: 0 0 0 4px;
@@ -243,112 +235,6 @@ textarea:focus, input:focus{
 .navbar ul li a:hover, .navbar ul li a:active {
 	color: #fff;
 	background-color: #2792f2;
-}
-
-/* Blog */
-
-.blog_text a {
-	text-decoration: none;
-	font-weight: 400;
-}
-
-.blog_text a:link, .blog_text a:visited {
-	color: #3A74A8;
-}
-
-.blog_text a:hover, .blog_text a:active {
-	color: #185286;
-}
-
-.blog_home_wrapper, .blog_post_wrapper {
-	background: url("../images/para_diag_sm_repeat.jpg") center center repeat;
-	padding-top: 227px;
-}
-
-.blog_home_contents, .blog_post_contents {
-	padding: 0;
-}
-
-.blog_home_article, .blog_post_article {
-	background: white;
-	border: 1px solid #ddd;
-	padding: 40px;
-	margin-bottom: 20px;
-	position: relative; /* for the article_continue_button */
-}
-
-.blog_home_post_image, .blog_post_post_image, .blog_content_image {
-	height: 280px;	
-	margin-bottom: 20px;
-}
-
-.blog_mobile_img {
-	background: url("../images/mobile-infographic.png") center center no-repeat;
-}
-
-.blog_milk_img {
-	background: url("../images/milk-options.jpg") center center no-repeat;
-}
-
-.blog_word_change_img {
-	background: url("../images/ppc-word-change.png") center center no-repeat;
-	max-height: 100px;
-}
-
-.blog_color_change_img {
-	background: url("../images/btn-color-change.png") center center no-repeat;
-	max-height: 180px;
-}
-
-.blog_bad_website_img {
-	background: url("../images/bad-website.jpg") center top no-repeat;
-}
-
-.article_title {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	font-size: 38px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	line-height: 40px;
-}
-
-.blog_author {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 21px;
-	font-style: italic;
-	color: #a3a3a3;
-	margin-top: 10px;
-}
-
-.tease_text p, .blog_text p {
-	color: #666;
-	font-size: 20px;
-	line-height: 28px;
-	font-family: 'Roboto Slab', sans-serif;
-	font-weight: 300;
-	margin-bottom: 25px;
-}
-
-.blog_text h2, .blog_text h3, .blog_text h4, .blog_text h5 {
-	font-family: 'Roboto Condensed', sans-serif;
-	color: #5f7f9f;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 1.1;
-	margin-bottom: 12px;
-}
-
-.blog_text h2 {
-	font-size: 36px;
-	font-weight:500;
-}
-
-.blog_text h3 {
-	font-size: 30px;
-	color: #222222;
 }
 
 /* Hero */

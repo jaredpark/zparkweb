@@ -1,4 +1,4 @@
-{% extends "cms/base.html" %}
+{% extends "myBlog/base.html" %}
 {% load cms_tags %}
 {% load crispy_forms_tags %}
 {% load placeholder_tags %}
@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class='container my_container'>
-        <div class='blog_post_contents container my_container'>
+        <div class='blog_post_contents'>
             <div class='blog_post_article'>
                 <a href='/blog/{{ post.slug }}'>
                     <div class='blog_post_post_image' style='background: url("/media/{{ post.main_image }}") center center no-repeat'></div>
