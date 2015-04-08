@@ -20,8 +20,17 @@
 	padding: 0;
 }
 
-.blog_home_post_image, .blog_post_post_image, .blog_content_image {
-	height: 280px;	
+.blog_home_post_image, .blog_post_image, .blog_content_image {
+	max-height: 280px;	
+	margin-bottom: 20px;
+}
+
+.blog_content_image img {
+	max-height: 280px;	
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 	margin-bottom: 20px;
 }
 
@@ -89,7 +98,7 @@
 }
 
 @media (max-width: 992px) {
-	.blog_home_post_image, .blog_post_post_image, .blog_content_image {
+	.blog_home_post_image, .blog_post_image, .blog_content_image {
 		height: 180px;
 		background-size: contain!important;
 	}
@@ -115,10 +124,10 @@
 		padding: 0 20px;
 	}
 
-	.blog_home_post_image, .blog_post_post_image, .blog_content_image {
+	.blog_home_post_image, .blog_post_image, .blog_content_image {
 		height: 100px!important;
 		background-size: contain!important;
-		margin-bottom: 10p	x;
+		margin-bottom: 10px;
 	}
 
 	.blog_home_article, .blog_post_article {
@@ -164,28 +173,3 @@
 }
 
 /*	5 Reasons your website is losing money pt 1 */
-
-.blog_mobile_img {
-	display: block;
-	background: url("../images/mobile-infographic.png") center center no-repeat;
-}
-
-.blog_milk_img {
-	background: url("../images/milk-options.jpg") center center no-repeat;
-}
-
-.blog_word_change_img {
-	background: url("../images/ppc-word-change.png") center center no-repeat;
-	height: 100px;
-	display: block;
-}
-
-.blog_color_change_img {
-	background: url("../images/btn-color-change.png") center center no-repeat;
-	height: 180px;
-	display: block;
-}
-
-.blog_bad_website_img {
-	background: url("../images/bad-website.jpg") center top no-repeat;
-}
