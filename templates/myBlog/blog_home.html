@@ -13,8 +13,8 @@
 	<div class='blog_home_contents container my_container'>
 		{% for post in blog_list %}
 		<div class='blog_home_article'>
-			<a href='/blog/{{ post.slug }}'>
-				<img class='blog_home_post_image' src='/media/{{ post.main_image }}'></img>
+			<a class='blog_home_post_image' href='/blog/{{ post.slug }}'>
+				<img src='/media/{{ post.main_image }}'></img>
 			</a>
 			<h1 class='article_title'>{{ post.title }}</h1>
 			<p class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} - {{ post.created_on }}</p>
