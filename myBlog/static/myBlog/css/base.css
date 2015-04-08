@@ -13,11 +13,12 @@
 
 .blog_home_wrapper, .blog_post_wrapper {
 	background: url("../images/para_diag_sm_repeat.jpg") center center repeat;
-	padding-top: 227px;
+	padding-top: 247px;
 }
 
 .blog_home_contents, .blog_post_contents {
 	padding: 0;
+	display: flex;
 }
 
 .blog_home_post_image img, .blog_post_image img, .blog_content_image img {
@@ -32,8 +33,8 @@
 .blog_home_article, .blog_post_article {
 	background: white;
 	border: 1px solid #ddd;
-	padding: 40px 40px 60px;
-	margin-bottom: 20px;
+	padding: 40px 40px 50px;
+	margin-bottom: 50px;
 	position: relative; /* for the article_continue_button */
 }
 
@@ -56,6 +57,17 @@
 	margin-top: 10px;
 }
 
+.blog_byline {
+	position: relative;
+}
+
+.blog_social {
+	position: absolute;
+	right: 20px;
+	width: 80px;
+	height: 32px;
+}
+
 .tease_text p, .blog_text p {
 	color: #666;
 	font-size: 20px;
@@ -66,11 +78,15 @@
 }
 
 .article_continue_button {
-	right: 100px;
-	bottom: 30px;
+	right: 80px;
+	bottom: 20px;
 	padding: 16px 0px;
 	width: 168px;
 	text-align:center;
+}
+
+.blog_text {
+	float: left;
 }
 
 .blog_text h2, .blog_text h3, .blog_text h4, .blog_text h5 {
