@@ -3,7 +3,11 @@
 {% load static %}
 
 {% block head_block %}
+<title>{{ blog_home_title }}</title>
 <meta name='description' content='A blog brought to you by SurgeSite Web Design and Development, a Tempe-based company that specializes in building custom website solutions for small businesses.'>
+{% endblock %}
+
+{% block css_block %}
 <link rel="stylesheet" href="{% static "myBlog/css/blog.css" %}">
 {% endblock %}
 
