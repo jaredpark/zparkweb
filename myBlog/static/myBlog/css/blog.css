@@ -14,6 +14,7 @@
 .blog_home_wrapper, .blog_post_wrapper {
 	background: url("../images/para_diag_sm_repeat.jpg") center center repeat;
 	padding-top: 247px;
+	min-height: 800px;
 }
 
 .blog_home_contents, .blog_post_contents {

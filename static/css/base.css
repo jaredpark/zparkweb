@@ -521,7 +521,7 @@ textarea:focus, input:focus{
 
 	.hero {
 		height: 430px;
-		background: url("../images/looking_up_sm_final.jpg") center 30px no-repeat;
+		background: url("../images/looking_up_sm_final_optimized.jpg") center 30px no-repeat;
 	}
 
 	.hero_btn {
@@ -547,7 +547,7 @@ textarea:focus, input:focus{
 @media (min-width: 481px) and (max-width: 767px) {
 	.hero {
 		height: 337px;
-		background: url("../images/computer_nerds_767_final.jpg") center 30px no-repeat;
+		background: url("../images/computer_nerds_767_final_optimized.jpg") center 30px no-repeat;
 	}
 
 	.hero_btn {
@@ -1130,7 +1130,7 @@ textarea:focus, input:focus{
 
 	.hero {
 		height: 519px;
-		background: url("../images/computer_nerds_1280_final.jpg") center 16px no-repeat;
+		background: url("../images/computer_nerds_1280_final_optimized.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
@@ -1145,7 +1145,7 @@ textarea:focus, input:focus{
 
 	.hero {
 		height: 620px;
-		background: url("../images/computer_nerds_1600_final.jpg") center 16px no-repeat;
+		background: url("../images/computer_nerds_1600_final_optimized.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
@@ -1160,7 +1160,7 @@ textarea:focus, input:focus{
 	
 	.hero {
 		height: 620px;
-		background: url("../images/computer_nerds_1920_final.jpg") center 16px no-repeat;
+		background: url("../images/computer_nerds_1920_final_optimized.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
@@ -1175,7 +1175,7 @@ textarea:focus, input:focus{
 
 	.hero {
 		height: 734px;
-		background: url("../images/computer_nerds_xl_final.jpg") center 16px no-repeat;
+		background: url("../images/computer_nerds_xl_final_optimized.jpg") center 16px no-repeat;
 	}
 
 	.hero_btn {
