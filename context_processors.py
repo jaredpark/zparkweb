@@ -2,7 +2,8 @@ def site_settings_processor(request):
 	context_dictionary = {
 		'root_url': 'www.SurgeSite.com',
 		'admin_name': 'superuser',
-		'company_name': 'SurgeSite Web Design & Web Development', #used in Title tag
+		'company_name': 'SurgeSite Web Design & Web Development',
+		'company_name_short': 'SurgeSite', #used in Title tag
 		'logo_file_name': 'images/surgesite_logo.png',
 		'site_email': 'contact@SurgeSite.com',
 		# !!!! important !!!! contact.html has ascii email addresses, must edit those manually

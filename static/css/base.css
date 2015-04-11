@@ -211,10 +211,6 @@ textarea:focus, input:focus{
 	margin-top:9px;
 }
 
-.navbar .custom-logo img {
-	margin: 7px 0 0;
-}
-
 .navbar ul li a {
 	line-height: 56px;
 	padding: 0 20px;
