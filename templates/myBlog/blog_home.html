@@ -1,6 +1,10 @@
-{% extends "myBlog/base.html" %}
+{% extends "cms/base.html" %}
 {% load cms_tags %}
 {% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static "myBlog/css/blog.css" %}">
+{% endblock %}
 
 {% block body_block %}
 
@@ -14,7 +18,7 @@
 		{% for post in blog_list %}
 		<div class='blog_home_article'>
 			<a class='blog_home_post_image' href='/blog/{{ post.slug }}'>
-				<img src='/media/{{ post.main_image }}'></img>
+				<img src='/media/{{ post.main_image }}' alt='{% if post.image_alt %} {{post.image_alt}} {% else %} blog main image {% endif %}'>
 			</a>
 			<h1 class='article_title'>{{ post.title }}</h1>
 			<p class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created_on | date:"M d, 'y" }}</p>

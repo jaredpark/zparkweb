@@ -15,6 +15,7 @@ class Post(models.Model):
 	author = models.ForeignKey(User)
 	created_on = models.DateTimeField(auto_now_add = False)
 	main_image = models.ImageField(null=True, blank=True, upload_to = './images')
+	image_alt = models.CharField(max_length = 100, null=True, blank=True)
 
 	def __unicode__(self):
 		return(self.title)

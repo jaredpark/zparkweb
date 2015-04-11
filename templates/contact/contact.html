@@ -7,9 +7,9 @@
 {% block page_content_block %}
 {% static_placeholder 'main_image' %}
 <div itemscope itemtype="http://schema.org/LocalBusiness">
-	<div style='text-align:center;'>On your phone or skype?<br /><br /><span itemprop="telephone"><a class='btn btn-danger' href="tel:+{{ company_phone_link }}">Call Us Now</a></span>
+	<div style='text-align:center;'>On your phone or skype?<br /><br /><a class='btn btn-danger' href="tel:+{{ company_phone_link }}">Call Us Now</a>
 	<br /><br />
-	Or call us at <h4>{{ company_phone_text }}</h4>
+	Or call us at <span itemprop="telephone"><h4>{{ company_phone_text }}</h4></span>
 	</div>
 </div>
 <br />

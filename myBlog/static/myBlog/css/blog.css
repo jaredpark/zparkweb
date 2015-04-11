@@ -1,0 +1,186 @@
+.blog_text a {
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.blog_text a:link, .blog_text a:visited {
+	color: #3A74A8;
+}
+
+.blog_text a:hover, .blog_text a:active {
+	color: #185286;
+}
+
+.blog_home_wrapper, .blog_post_wrapper {
+	background: url("../images/para_diag_sm_repeat.jpg") center center repeat;
+	padding-top: 247px;
+}
+
+.blog_home_contents, .blog_post_contents {
+	padding: 0;
+	display: flex;
+}
+
+.blog_home_post_image img, .blog_post_image img, .blog_content_image img {
+	max-height: 280px;	
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.blog_home_article, .blog_post_article {
+	background: white;
+	border: 1px solid #ddd;
+	padding: 40px 40px 50px;
+	margin-bottom: 50px;
+	position: relative; /* for the article_continue_button */
+}
+
+.article_title {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 38px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 40px;
+}
+
+.blog_author {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 21px;
+	font-style: italic;
+	color: #a3a3a3;
+	margin-top: 10px;
+}
+
+.blog_byline {
+	position: relative;
+}
+
+.blog_social {
+	position: absolute;
+	right: 20px;
+	width: 80px;
+	height: 32px;
+}
+
+.tease_text p, .blog_text p {
+	color: #666;
+	font-size: 20px;
+	line-height: 28px;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 300;
+	margin-bottom: 25px;
+}
+
+.article_continue_button {
+	right: 40px;
+	bottom: 20px;
+	padding: 16px 0px;
+	width: 168px;
+	text-align:center;
+}
+
+.blog_text {
+	float: left;
+}
+
+.blog_text h2, .blog_text h3, .blog_text h4, .blog_text h5 {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #5f7f9f;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.1;
+	margin-bottom: 12px;
+}
+
+.blog_text h2 {
+	font-size: 36px;
+	font-weight:500;
+}
+
+.blog_text h3 {
+	font-size: 30px;
+	color: #222222;
+}
+
+@media (max-width: 992px) {
+	.blog_home_post_image, .blog_post_image, .blog_content_image {
+		height: 180px;
+		background-size: contain!important;
+	}
+}
+
+@media (max-width: 767px){
+
+	.blog_home_wrapper, .blog_post_wrapper {
+		padding-top: 175px;
+	}
+	.blog_post_wrapper .container.my_container {
+		padding:0;
+	}
+
+	.runner .container.my_container {
+		padding: 0 40px;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.runner .container.my_container {
+		padding: 0 20px;
+	}
+
+	.blog_home_post_image, .blog_post_image, .blog_content_image {
+		height: 100px!important;
+		background-size: contain!important;
+		margin-bottom: 10px;
+	}
+
+	.blog_home_article, .blog_post_article {
+		padding: 20px 20px 55px;
+	}
+
+	.article_title {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.blog_author {
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.article_continue_button {
+		left: 20px;
+		bottom: 20px;
+		padding: 12px 0px;
+		width: 128px;
+		font-size: 13px;
+	}
+
+	.tease_text p, .blog_text p {
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 15px;
+		text-align: left; 
+	}
+
+	.blog_text h2, .blog_text h3, .blog_text h4, .blog_text h5 {
+		margin-bottom: 8px;
+	}
+
+	.blog_text h2 {
+		font-size: 30px;
+	}
+
+	.blog_text h3 {
+		font-size: 24px;
+	}
+}
+
+/*	5 Reasons your website is losing money pt 1 */

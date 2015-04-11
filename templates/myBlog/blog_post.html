@@ -1,7 +1,12 @@
-{% extends "myBlog/base.html" %}
+{% extends "cms/base.html" %}
 {% load cms_tags %}
 {% load crispy_forms_tags %}
 {% load placeholder_tags %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static "myBlog/css/blog.css" %}">
+{% endblock %}
 
 {% block body_block %}
 
@@ -14,14 +19,14 @@
     <div class='blog_post_contents container my_container'>
         <div class='blog_post_article'>
             <a class='blog_home_post_image' href='/blog/{{ post.slug }}'>
-                <img src='/media/{{ post.main_image }}'></img>
+                <img src='/media/{{ post.main_image }}' alt='{% if post.image_alt %} {{post.image_alt}} {% else %} blog main image {% endif %}'></img>
             </a>
             <h1 class='article_title'>{{ post.title }}</h1>
             <div class='blog_byline'>
                 <p style='float: left;' class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created_on | date:"M d, 'y" }}</p>
                 <div class='blog_social'></div>
             </div>
-            <span class='blog_text'>{% render_placeholder post.content %}</span>
+            <div class='blog_text'>{% render_placeholder post.content %}</div>
         </div>
         {% comment %}
 
