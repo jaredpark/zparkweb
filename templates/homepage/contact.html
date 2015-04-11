@@ -2,14 +2,8 @@
 {% load cms_tags %}
 {% load crispy_forms_tags %}
 
-<a name="contact"></a>
 <div id='contact' class='shadow'>
 	<div class='container my_container'>
-		{% if name %}
-			<div class='message_sent_redirect' title="We're happy to hear from you">
-				<div style='color:#ddd; padding: 30px 0;'><p style='font-size: 24px; font-style:italic'>Thanks!</p><p style='font-size:18px'>Talk to you soon {{ name }}</p></div>
-			</div>
-		{% else %}
 		<div class='transition_bar'><div class='transition_box'></div><h3>Get in touch to schedule a free consultation</h3></div>
 		<div id='contact_content'>
 			<div class='col one_quarter_col' itemscope itemtype="http://schema.org/LocalBusiness">
@@ -30,28 +24,33 @@
 				</div>
 			</div>
 			<div class='col three_quarter_col'>
+				{% if name %}
+				<div class='message_sent_redirect' title="We're happy to hear from you">
+					<p style='font-size:14px; text-align: center; margin-top:30px'>Thanks for getting in touch, I'll get back to you soon {{ name }}</p>
+				</div>
+				{% else %}
 				<form role='form' method='post' class='contact_form' action='#contact'>
 					{% csrf_token %}
 					<div class="form_icon form_name {% if 'name' in error_fields %}error_field{% endif %}"></div>
 					<div class="{% if 'name' in error_fields %}error_field{% endif %}" title='name icon'>
-						<input for='id_name' name="name" placeholder='{{ name_placeholder }}' type="text" value='{{ name_value }}'>
+						<input name="name" placeholder='{{ name_placeholder }}' type="text" value='{{ name_value }}'>
 					</div>
 					<div class="form_icon form_email"></div>
 					<div class="{% if 'email' in error_fields %}error_field{% endif %}" title='email icon'>
-						<input for='id_email' name="email" placeholder="{{ email_placeholder }}" type="email" value='{{ email_value }}'>
+						<input name="email" placeholder="{{ email_placeholder }}" type="email" value='{{ email_value }}'>
 					</div>
 					<div class="form_icon form_phone"></div>
 					<div class="{% if 'phone' in error_fields %}error_field{% endif %}" title='phone icon'>
-						<input for='id_phone' name="phone" placeholder="{{ phone_placeholder }}" type="text" value='{{ phone_value }}'>
+						<input name="phone" placeholder="{{ phone_placeholder }}" type="text" value='{{ phone_value }}'>
 					</div>
 					<div class="form_icon form_message"></div>
 					<div class="{% if 'message' in error_fields %}error_field{% endif %}" title='message icon'>
-						<input for='id_message' maxlength="400" name="message" placeholder="{{ message_placeholder }}" type="text" value='{{ message_value }}'>
+						<input maxlength="400" name="message" placeholder="{{ message_placeholder }}" type="text" value='{{ message_value }}'>
 					</div>
 					<button type="submit" name="contact" class="btn contact_form_button">Send</button>
 				</form>
+				{% endif %}
 			</div>
 		</div>
-		{% endif %}
 	</div>
 </div>
