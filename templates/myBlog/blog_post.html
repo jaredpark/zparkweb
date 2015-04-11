@@ -19,7 +19,7 @@
     <div class='blog_post_contents container my_container'>
         <div class='blog_post_article'>
             <a class='blog_home_post_image' href='/blog/{{ post.slug }}'>
-                <img src='/media/{{ post.main_image }}' alt='{% if post.image_alt %} {{post.image_alt}} {% else %} blog main image {% endif %}'></img>
+                <img src='/media/{{ post.main_image }}' alt='{% if post.image_alt %} {{post.image_alt}} {% else %} blog main image {% endif %}' />
             </a>
             <h1 class='article_title'>{{ post.title }}</h1>
             <div class='blog_byline'>
