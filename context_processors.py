@@ -12,6 +12,7 @@ def site_settings_processor(request):
 		'homepage_title': 'SurgeSite, Tempe Web Design and Development',
 		'blog_home_title': 'Blog Home - SurgeSite',
 		'homepage_meta_description': 'SurgeSite develops and designs small business website solutions. All websites are hand-coded and maintained for your business\'s needs.',
+		'blog_home_meta_description': 'A blog brought to you by SurgeSite Web Design and Development, a Tempe-based company that specializes in building custom website solutions for small businesses.',
 		'navbar_link1_name': '/#portfolio',
 		'navbar_link1_text': 'PORTFOLIO',
 		'navbar_link2_name': '/#services',

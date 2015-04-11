@@ -624,7 +624,7 @@ textarea:focus, input:focus{
 		float: left;
 	}
 
-	.transition_bar h3 {
+	.transition_bar h3, .transition_bar h1 {
 		color: #5f7f9f;
 		font-style: italic;
 		font-size: 20px;
@@ -951,7 +951,7 @@ textarea:focus, input:focus{
 		margin-top: -21px;
 	}
 
-	.transition_bar h3 {
+	.transition_bar h3, .transition_bar h1 {
 		color: #5f7f9f;
 		font-style: italic;
 		font-size: 32px;
@@ -963,6 +963,10 @@ textarea:focus, input:focus{
 
 	.transition_box {
 		display: none;
+	}
+
+	header a.custom-logo img {
+		margin-top: 8px;
 	}
 
 	/* portfolio */

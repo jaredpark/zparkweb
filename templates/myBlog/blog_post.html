@@ -18,7 +18,7 @@
 <div class='blog_post_wrapper'>
     <div class='runner'>
         <div class='container my_container'>
-            <div class='transition_bar'><div class='transition_box'></div><h3>Things to know about your website</h3></div>
+            <div class='transition_bar'><div class='transition_box'></div><h1>Things to know about your website</h1></div>
         </div>
     </div>
     <div class='blog_post_contents container my_container'>
@@ -26,7 +26,7 @@
             <a class='blog_home_post_image' href='/blog/{{ post.slug }}'>
                 <img src='/media/{{ post.main_image }}' alt='{% if post.image_alt %} {{post.image_alt}} {% else %} blog main image {% endif %}' />
             </a>
-            <h1 class='article_title'>{{ post.title }}</h1>
+            <h2 class='article_title'>{{ post.title }}</h2>
             <div class='blog_byline'>
                 <p style='float: left;' class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created_on | date:"M d, 'y" }}</p>
                 <div class='blog_social'></div>

@@ -4,7 +4,7 @@
 
 {% block head_block %}
 <title>{{ blog_home_title }}</title>
-<meta name='description' content='A blog brought to you by SurgeSite Web Design and Development, a Tempe-based company that specializes in building custom website solutions for small businesses.'>
+<meta name='description' content='{{ blog_home_meta_description }}'>
 {% endblock %}
 
 {% block css_block %}
@@ -16,7 +16,7 @@
 <div class='blog_home_wrapper'>
 	<div class='runner'>
 		<div class='container my_container'>
-			<div class='transition_bar'><div class='transition_box'></div><h1><h3>Web design and development tips for business owners</h3></h1></div>
+			<div class='transition_bar'><div class='transition_box'></div><h1>Web design and development tips for business owners</h1></div>
 		</div>
 	</div>
 	<div class='blog_home_contents container my_container'>
@@ -25,7 +25,7 @@
 			<a class='blog_home_post_image' href='/blog/{{ post.slug }}'>
 				<img src='/media/{{ post.main_image }}' alt='{% if post.image_alt %} {{post.image_alt}} {% else %} blog main image {% endif %}'>
 			</a>
-			<h1 class='article_title'>{{ post.title }}</h1>
+			<h2 class='article_title'>{{ post.title }}</h2>
 			<p class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created_on | date:"M d, 'y" }}</p>
 			<div class='tease_text'>{{ post.tease | safe }}</div>
 			<a href='/blog/{{ post.slug }}' class="article_continue_button">Continue reading</a>
