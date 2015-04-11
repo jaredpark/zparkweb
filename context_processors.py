@@ -8,7 +8,8 @@ def site_settings_processor(request):
 		# !!!! important !!!! contact.html has ascii email addresses, must edit those manually
 		'company_phone_text': '',
 		'company_phone_link': '16024299029',
-		'meta_content': 'SurgeSite develops and designs web business solutions. We hand-code and maintain websites with continuing content and marketing services.',
+		'title': 'SurgeSite, Tempe Web Design and Development',
+		'homepage_meta_description': 'SurgeSite develops and designs small business website solutions. All websites are hand-coded and maintained for your business\'s needs.',
 		'navbar_link1_name': '/#portfolio',
 		'navbar_link1_text': 'PORTFOLIO',
 		'navbar_link2_name': '/#services',

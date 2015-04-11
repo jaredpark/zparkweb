@@ -12,6 +12,7 @@ class Post(models.Model):
 	slug = models.CharField(max_length = 100, unique = True)
 	content = PlaceholderField('Blog Post Content', null=True, blank=True)
 	tease = HTMLField(null=True, blank=True)
+	meta_description_content = models.CharField(max_length = 200, null=True, blank=True)
 	author = models.ForeignKey(User)
 	created_on = models.DateTimeField(auto_now_add = False)
 	main_image = models.ImageField(null=True, blank=True, upload_to = './images')
