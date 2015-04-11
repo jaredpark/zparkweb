@@ -9,7 +9,7 @@ from utilities import slug_it
 class Post(models.Model):
 
 	title = models.CharField(max_length = 100, unique = True)
-	meta_title = models.CharField(max_length = 100, unique = True)
+	meta_title = models.CharField(max_length = 100, null=True, blank=True)
 	slug = models.CharField(max_length = 100, unique = True)
 	content = PlaceholderField('Blog Post Content', null=True, blank=True)
 	tease = HTMLField(null=True, blank=True)
