@@ -22,7 +22,7 @@
 			</a>
 			<h1 class='article_title'>{{ post.title }}</h1>
 			<p class='blog_author'>{{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created_on | date:"M d, 'y" }}</p>
-			<span class='tease_text'>{{ post.tease | safe }}</span>
+			<div class='tease_text'>{{ post.tease | safe }}</div>
 			<a href='/blog/{{ post.slug }}' class="article_continue_button">Continue reading</a>
 		</div>
 		{% endfor %}
