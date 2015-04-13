@@ -3,4 +3,3 @@
 *.pot
 __pycache__/
 settings_dev.py
-local_static/
