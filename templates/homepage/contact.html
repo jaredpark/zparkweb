@@ -33,19 +33,19 @@
 					{% csrf_token %}
 					<div class="form_icon form_name {% if 'name' in error_fields %}error_field{% endif %}"></div>
 					<div class="{% if 'name' in error_fields %}error_field{% endif %}" title='name icon'>
-						<input name="name" aria-labelled='name' placeholder='{{ name_placeholder }}' type="text" value='{{ name_value }}'>
+						<input name="name" aria-label='name' placeholder='{{ name_placeholder }}' type="text" value='{{ name_value }}'>
 					</div>
 					<div class="form_icon form_email"></div>
 					<div class="{% if 'email' in error_fields %}error_field{% endif %}" title='email icon'>
-						<input name="email" aria-labelled='email' placeholder="{{ email_placeholder }}" type="email" value='{{ email_value }}'>
+						<input name="email" aria-label='email' placeholder="{{ email_placeholder }}" type="email" value='{{ email_value }}'>
 					</div>
 					<div class="form_icon form_phone"></div>
 					<div class="{% if 'phone' in error_fields %}error_field{% endif %}" title='phone icon'>
-						<input name="phone" aria-labelled='phone' placeholder="{{ phone_placeholder }}" type="text" value='{{ phone_value }}'>
+						<input name="phone" aria-label='phone' placeholder="{{ phone_placeholder }}" type="text" value='{{ phone_value }}'>
 					</div>
 					<div class="form_icon form_message"></div>
 					<div class="{% if 'message' in error_fields %}error_field{% endif %}" title='message icon'>
-						<input maxlength="400" name="message" aria-labelled='message' placeholder="{{ message_placeholder }}" type="text" value='{{ message_value }}'>
+						<input maxlength="400" name="message" aria-label='message' placeholder="{{ message_placeholder }}" type="text" value='{{ message_value }}'>
 					</div>
 					<button type="submit" name="contact" class="btn contact_form_button">Send</button>
 				</form>

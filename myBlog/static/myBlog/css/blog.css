@@ -19,7 +19,6 @@
 
 .blog_home_contents, .blog_post_contents {
 	padding: 0;
-	display: flex;
 }
 
 .blog_home_post_image img, .blog_post_image img, .blog_content_image img {
@@ -37,6 +36,7 @@
 	padding: 40px 40px 50px;
 	margin-bottom: 50px;
 	position: relative; /* for the article_continue_button */
+	float: left;
 }
 
 .article_title {

@@ -898,7 +898,7 @@ textarea:focus, input:focus{
 	.my_container {
 		width:100%;
 		margin: 0 auto;
-		max-width: 62.5em;
+		max-width: 875px;
 	}
 
 	.half_col {
