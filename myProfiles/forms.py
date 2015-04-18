@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from myProfiles.models import UserProfile
+from myProfiles.models import UserProfile, UserProject
 from django.contrib.auth.models import User
 from registration.forms import RegistrationForm
 
@@ -12,4 +12,7 @@ class MyRegistrationForm(RegistrationForm):
 class MyProfileForm(ModelForm):
 	class Meta:
 		model = UserProfile
-		fields = ('image', 'email', 'phone', 'notes')
+		fields = ('first_name', 'last_name', 'phone', 'email', 'address', 'city', 'zipcode')
+
+class SubmitUrlForm(forms.Form):
+	url = forms.URLField(label='Submit the URL of a new design idea', max_length=80)

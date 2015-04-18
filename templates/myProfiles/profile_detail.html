@@ -1,4 +1,4 @@
-{% extends 'cms/base_sidebar_left.html' %}
+{% extends 'myBlog/blog_home.html' %}
 
 {% load cms_tags %}
 {% load crispy_forms_tags %}
@@ -22,8 +22,5 @@
 		{% include 'user_interface/account_log_table.html' %}
 	</div>
 </div>
-<row style='text-align:right; padding-top:40px;'>
-<!-- <p><a class='btn btn-xs btn-danger' href="{% url 'auth_logout' %}?next={% page_url 'home' %}" style='color:#fff'>Log Out</a></p> -->
-</row>
 {% endif %}
 {% endblock page_content_block %}

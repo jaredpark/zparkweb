@@ -2,6 +2,7 @@
 Views for creating, editing and viewing site-specific user profiles.
 
 """
+import re
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
@@ -18,12 +19,14 @@ from django.contrib.auth.models import User
 
 from myProfiles import utils
 from utilities import admin_name
+from myProfiles.models import UserProject
+from myProfiles.forms import SubmitUrlForm
 
 def home(request):
     return(HttpResponseRedirect(reverse(profile_detail, args=[request.user.username])))
 
-def profile_detail(request, username=None, public_profile_field='public',
-                   template_name='myProfiles/profile_detail.html',
+def profile_detail(request, username=None, public_profile_field=None,
+                   template_name='myProfiles/account_home.html',
                    extra_context=None):
     if username is None:
         username = request.user.username
@@ -88,17 +91,53 @@ def profile_detail(request, username=None, public_profile_field='public',
         raise Http404
     if public_profile_field is not None and \
        not getattr(profile_obj, public_profile_field):
-        if request.user.username in (username, admin_name()):
+        if user.username in (username, admin_name()):
             pass
         else:
             profile_obj = None
-    
     if extra_context is None:
         extra_context = {}
     context = RequestContext(request)
     for key, value in extra_context.items():
         context[key] = callable(value) and value() or value
+
+    project = UserProject.objects.get(pk=user.pk)
+    design_urls = project.design_url
+    context['project_design_url'] = design_urls.split(',')
+
+    if request.method == 'POST':
+        if 'add_url' in request.POST:
+            form = SubmitUrlForm(request.POST)
+            if form.is_valid():
+                project.design_url = design_urls + ',' + form.cleaned_data['url']
+                project.save()
+            else:
+                a;sdklfj
+        else:
+            for url in context['project_design_url']:
+                if url in request.POST:
+                    regex = r"" + re.escape(url)
+                    if re.search(regex, design_urls):
+                        regex = r"" + re.escape(url) + ","
+                        design_urls = re.sub(regex, '', design_urls)
+                        regex = r"," + re.escape(url) + ","
+                        design_urls = re.sub(regex, ',', design_urls)
+                        regex = r"," + re.escape(url)
+                        design_urls = re.sub(regex, '', design_urls)
+                        project.design_url = design_urls
+                        project.save()
+                        context['project_design_url'] = design_urls.split(',')
+
+    # project = UserProject.objects.get(pk=user.pk)
+    # if request.method == 'POST':
+    #         form = UserProjectForm(data=request.POST, instance=project)
+    #         if form.is_valid():
+    #             form.save()
     
+    # context['project_form'] = UserProjectForm(instance=project)
+    context['url_form'] = SubmitUrlForm()
+    context['project'] = project
+
     return render_to_response(template_name,
                               { 'profile': profile_obj },
                               context_instance=context)

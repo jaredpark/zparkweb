@@ -17,7 +17,7 @@ THIRD_PARTY_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'sekizai.context_processors.sekizai',
     'cms.context_processors.cms_settings',
-    'django_facebook.context_processors.facebook',
+    # 'django_facebook.context_processors.facebook',
 )
 
 LOCAL_CONTEXT_PROCESSORS = (
@@ -65,7 +65,7 @@ TEMPLATE_DEBUG = False
 AUTH_PROFILE_MODULE = 'myProfiles.UserProfile'
 
 AUTHENTICATION_BACKENDS = (
-    'django_facebook.auth_backends.FacebookBackend',
+    # 'django_facebook.auth_backends.FacebookBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -137,7 +137,7 @@ THIRD_PARTY_APPS = (
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
     'polls',
-    'django_facebook',
+    # 'django_facebook',
 )
 
 CKEDITOR_SETTINGS = {

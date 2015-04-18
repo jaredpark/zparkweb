@@ -126,16 +126,17 @@ input:-webkit-autofill:focus {
 	max-width: 140px;
 }
 
-.hero_btn, .contact_form_button, .call_me_now_button, .article_continue_button, .blog_contact_button {
+.blue_btn, .hero_btn, .contact_form_button, .call_me_now_button, .article_continue_button, .blog_contact_button {
 	position: absolute;
 	background: #2792f2;
 	color: #ddd;
 	font-weight: 300;
 	box-shadow: 0px 1px 3px #616161;
 	z-index: 100;
+	border-radius: 0;
 }
 
-.hero_btn:hover, .contact_form_button:hover, .call_me_now_button:hover, .article_continue_button:hover, .blog_contact_button:hover {
+.blue_btn:hover, .hero_btn:hover, .contact_form_button:hover, .call_me_now_button:hover, .article_continue_button:hover, .blog_contact_button:hover {
 	background: #0570d0;
 	text-decoration: none;
 	color: #ddd;
@@ -491,9 +492,9 @@ textarea:focus, input:focus{
 .footer_content {
 	display:flex;
 	padding: 10px 0;	
-	box-shadow: 0px 2px 15px 8px #333;
-	-moz-box-shadow: 0px 2px 15px 8px #333;
-	-webkit-box-shadow: 0px 2px 15px 8px #333;
+	box-shadow: 0px 2px 15px 5px #777;
+	-moz-box-shadow: 0px 2px 15px 5px #777;
+	-webkit-box-shadow: 0px 2px 15px 5px #777;
 }
 
 .footer_social {
@@ -545,6 +546,7 @@ textarea:focus, input:focus{
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+
 	.hero {
 		height: 337px;
 		background: url("../images/computer_nerds_767_final_optimized.jpg") center 30px no-repeat;
@@ -575,10 +577,6 @@ textarea:focus, input:focus{
 
 	.my_container {
 		width: 100%;
-	}
-
-	.col {
-		float: none;
 	}
 
 	.half_col {
@@ -928,16 +926,23 @@ textarea:focus, input:focus{
 	}
 
 	.one_quarter_col {
-		width:24%;
+		width:23.5%;
 		padding: 0;
 		margin: 0 2% 0 0;
 	}
 
 	.three_quarter_col {
-		width:74%;
+		width:74.5%;
 		padding: 0;	
 	}
 
+	.one_quarter_col.second {
+		
+	}
+
+	.one_quarter_col.last {
+		margin: 0;
+	}
 
 	.break_style_1 {
 		height: 16px;

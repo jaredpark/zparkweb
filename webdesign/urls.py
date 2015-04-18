@@ -16,13 +16,9 @@ admin.autodiscover()
 #         return('/accounts/login/')
 
 urlpatterns = patterns('',
-    url(r'^favicon.ico$', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=False), name="favicon"),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^(?i)favicon.ico$', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=False), name="favicon"),
+    url(r'^(?i)admin/', include(admin.site.urls)),
     # url(r'^contact/', include('contact.urls')),
 	# url(r'^my_account/', include('user_interface.urls')),
-    url(r'accounts/register/$', RegistrationView.as_view(form_class = MyRegistrationForm), name = 'registration_register'),
-	url(r'^accounts/', include('registration.backends.default.urls')),
-    # url(r'^profiles/', include('myProfiles.urls')),
-    url(r'^facebook/', include('django_facebook.urls')),
-    url(r'^', include('cms.urls')),
+    url(r'^(?i)', include('cms.urls')),
 )

@@ -1,0 +1,44 @@
+{% load cms_tags %}
+<section class='row' style='margin-top: 20px'>
+	<div class='third_col col emphasis' style='padding-left: 10px;'>Project Description:</div>
+	<div class='two_thirds_col col'>{{ project.description }}</div>
+</section>
+<div class='account_table'>
+	<section class='row'>
+		<div class='half_col col emphasis'>Project Current Status</div>
+		<div class='half_col col last'>
+			<a href='{{ project.progress_url }}' target='_blank' rel='nofollow'>{{ project.progress_url }}</a>
+		</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Links to Design Ideas</div>
+		<div class='half_col col last'>
+		{% for url in project_design_url %}
+			<div style='margin-bottom: 10px'>
+				<form role='form' method='post'>
+					{% csrf_token %}
+					<button class="delete_btn" type="submit" name="{{ url }}" onclick="return confirm_alert(this);" ></button>
+					<a href='{{ url }}' rel='nofollow' target="_blank">{{ url }}</a>
+				</form>
+			</div>
+		{% endfor %}
+		</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Submit a new design URL</div>
+		<div class='half_col col last'>
+			<form role='form' method='post'>
+				{% csrf_token %}
+				<input name="url" aria-label='new_url' placeholder='http://www.website.com' type="text">
+				<button type="submit" name="add_url" class="btn blue_btn inline">Submit</button>
+			</form>
+		</div>
+	</section>
+</div>
+
+<script>
+//alert on delete
+function confirm_alert(node) {
+    return confirm("You are about to permanently delete a URL from your design ideas. Click OK to continue or CANCEL to quit.");
+}
+</script>
