@@ -1,5 +1,5 @@
-from south.modelsinspector import add_introspection_rules
-add_introspection_rules([], ["^myProfiles\.models\.SeparatedValuesField"])
+# from south.modelsinspector import add_introspection_rules
+# add_introspection_rules([], ["^myProfiles\.models\.SeparatedValuesField"])
 
 from django.db import models
 from django.contrib.auth.models import User
@@ -8,28 +8,6 @@ from registration.signals import user_registered
 from datetime import datetime
 
 from cms.models.fields import PlaceholderField
-
-class SeparatedValuesField(models.TextField):
-    __metaclass__ = models.SubfieldBase
-
-    def __init__(self, *args, **kwargs):
-        self.token = kwargs.pop('token', ',')
-        super(SeparatedValuesField, self).__init__(*args, **kwargs)
-
-    def to_python(self, value):
-        if not value: return
-        if isinstance(value, list):
-            return value
-        return value.split(self.token)
-
-    def get_db_prep_value(self, value, connection, prepared=False):
-        if not value: return
-        assert(isinstance(value, list) or isinstance(value, tuple))
-        return self.token.join([str(s) for s in value])
-
-    def value_to_string(self, obj):
-        value = self._get_val_from_obj(obj)
-        return self.get_db_prep_value(value)
 
 class UserProfile(models.Model):
 # class UserProfile(FacebookProfileModel):
@@ -103,6 +81,23 @@ class UserProject(models.Model):
 	class Meta:
 		verbose_name = _('user project')
 		verbose_name_plural = _('user projects')
+
+	def __unicode__(self):
+		return(self.user.user.username)
+
+	def __str__(self):
+		return(self.user.user.username)
+
+class UserSupport(models.Model):
+	user = models.ForeignKey(UserProfile, related_name='support')
+	has_basic_support = models.BooleanField(default=True)
+	has_monthly_support = models.BooleanField(default=False)
+	monthly_hours = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True, default=0)
+	monthly_hours_remaining = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True, default=0)
+
+	class Meta:
+		verbose_name = _('user support')
+		verbose_name_plural = _('user support')
 
 	def __unicode__(self):
 		return(self.user.user.username)

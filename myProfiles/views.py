@@ -11,6 +11,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.core.mail import EmailMessage
 
 # from django.views.generic.list_detail import object_list
 
@@ -19,8 +20,9 @@ from django.contrib.auth.models import User
 
 from myProfiles import utils
 from utilities import admin_name
-from myProfiles.models import UserProject
-from myProfiles.forms import SubmitUrlForm
+from context_processors import site_settings_processor
+from myProfiles.models import UserProject, UserSupport
+from myProfiles.forms import SubmitUrlForm, SupportRequestForm
 
 def home(request):
     return(HttpResponseRedirect(reverse(profile_detail, args=[request.user.username])))
@@ -113,6 +115,14 @@ def profile_detail(request, username=None, public_profile_field=None,
                 project.save()
             else:
                 a;sdklfj
+        elif 'support_request' in request.POST:
+            form = SupportRequestForm(data = request.POST)
+            if form.is_valid():
+                message = form.cleaned_data['message']
+                recipients = [site_settings_processor(request)['site_email'],]
+                from_email = user.email
+                email_object = EmailMessage(subject = 'Support Request Form', body = message, from_email = from_email, to = recipients)
+                email_object.send()
         else:
             for url in context['project_design_url']:
                 if url in request.POST:
@@ -137,6 +147,8 @@ def profile_detail(request, username=None, public_profile_field=None,
     # context['project_form'] = UserProjectForm(instance=project)
     context['url_form'] = SubmitUrlForm()
     context['project'] = project
+    context['support'] = UserSupport.objects.get(pk=user.pk)
+    context['basic_support_services'] = ['Weekly Backups', 'Monthly Security Updates', 'Quarterly Software Updates']
 
     return render_to_response(template_name,
                               { 'profile': profile_obj },

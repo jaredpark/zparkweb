@@ -45,6 +45,10 @@ ul#account-tabs li.active a, ul#account-tabs li a:hover {
 	background-color: #fafbfc;
 }
 
+.account_table a:hover {
+	font-weight: 500;
+}
+
 #account-tab-content .emphasis {
 	font-weight: 700;
 	color: #717273;
@@ -84,16 +88,20 @@ ul#account-tabs li.active a, ul#account-tabs li a:hover {
 .account_table .blue_btn.inline {
 	position: relative;
 	display: inline-block;
-	margin: -8px 0 0 10px;
+	margin: -8px 0 0 15px;
 	padding: 0;
-	width: 80px;
+	width: 100px;
 	height: 40px;
 }
 
 .delete_btn {
-  height: 16px;
-  width: 16px;
-  background: red;
-  margin-right: 8px;
-  border: 1px solid #ccc;
+  background: transparent;
+  color: red;
+  font-size: 14px;
+  font-weight: 300;
+  border:none;
+}
+
+.delete_btn:hover {
+  font-weight: 500;
 }

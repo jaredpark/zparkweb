@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from myProfiles.models import UserProfile, UserProject
+from myProfiles.models import UserProfile
 from django.contrib.auth.models import User
 from registration.forms import RegistrationForm
 
@@ -16,3 +16,6 @@ class MyProfileForm(ModelForm):
 
 class SubmitUrlForm(forms.Form):
 	url = forms.URLField(label='Submit the URL of a new design idea', max_length=80)
+
+class SupportRequestForm(forms.Form):
+	message = forms.CharField(label = 'Tell us how we can help', max_length=200, widget=forms.Textarea)

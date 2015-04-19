@@ -1,5 +1,5 @@
 {% load cms_tags %}
-<section class='row' style='margin-top: 20px'>
+<section class='row' style='margin-top: 30px'>
 	<div class='third_col col emphasis' style='padding-left: 10px;'>Project Description:</div>
 	<div class='two_thirds_col col'>{{ project.description }}</div>
 </section>
@@ -14,11 +14,11 @@
 		<div class='half_col col emphasis'>Links to Design Ideas</div>
 		<div class='half_col col last'>
 		{% for url in project_design_url %}
-			<div style='margin-bottom: 10px'>
+			<div style='margin-bottom: 10px; position: relative'>
 				<form role='form' method='post'>
 					{% csrf_token %}
-					<button class="delete_btn" type="submit" name="{{ url }}" onclick="return confirm_alert(this);" ></button>
 					<a href='{{ url }}' rel='nofollow' target="_blank">{{ url }}</a>
+					<button class="delete_btn" type="submit" name="{{ url }}" onclick="return confirm_alert(this);" >Remove</button>
 				</form>
 			</div>
 		{% endfor %}

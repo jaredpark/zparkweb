@@ -1,0 +1,16 @@
+{% load cms_tags %}
+
+<div class='account_table'>
+	<section class='row'>
+		<div class='half_col col emphasis'>Outstanding Balance</div>
+		<div class='half_col col last'>${{ profile.total_balance }}</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Current Balance Due</div>
+		<div class='half_col col last'>${{ profile.current_balance }}</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Balance Due Date</div>
+		<div class='half_col col last'>{{ profile.balance_due_date }}</div>
+	</section>
+</div>

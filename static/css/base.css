@@ -21,6 +21,14 @@ p {
 	line-height: 1.6;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
+textarea, input {
+	line-height: normal;
+}
+
 input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 50px transparent inset;
     -webkit-text-fill-color: #333;
@@ -183,6 +191,10 @@ input:-webkit-autofill:focus {
 
 textarea:focus, input:focus{
     outline: 0;
+}
+
+.center {
+	text-align: center;
 }
 
 /* Navbar */

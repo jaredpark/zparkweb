@@ -1,0 +1,39 @@
+{% load cms_tags %}
+
+<div class='account_table'>
+	<section class='row'>
+		<div class='half_col col emphasis'>Current Support Plan:</div>
+		<div class='half_col col last'>
+		{% if support.has_basic_support %}
+			<ul style='padding:0 0 0 20px;'>
+			{% for service in basic_support_services %}
+				<li style='margin-bottom: 10px'>
+					{{ service }}
+				</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+		{% if support.has_monthly_support %}
+			<ul style='padding:0 0 0 20px;'>
+				<li style='margin-bottom: 10px'>
+					{{ support.monthly_hours }} hrs of Monthly Support
+				</li>
+			</ul>
+		{% endif %}
+		</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Monthly Support Remaining:</div>
+		<div class='half_col col last'>{{ support.monthly_hours_remaining }}</div>
+	</section>
+	<section class='row'>
+		<div class='emphasis center'><h3 style='margin-top:0'>New Support Request</h3></div>
+		<div style='margin:40px auto 0; width:320px; position: relative'>
+			<form role='form' method='post'>
+				{% csrf_token %}
+				<textarea name="message" aria-label='new_url' placeholder='How can I help?' rows='3' style='font-size:14px'></textarea>
+				<button type="submit" name="support_request" class="btn blue_btn inline" style='position:absolute; margin-top:11px'>Submit</button>
+			</form>
+		</div>
+	</section>
+</div>
