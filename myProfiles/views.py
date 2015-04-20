@@ -21,7 +21,7 @@ from django.contrib.auth.models import User
 from myProfiles import utils
 from utilities import admin_name
 from context_processors import site_settings_processor
-from myProfiles.models import UserProject, UserSupport
+from myProfiles.models import UserProject, UserSupport, UserImages
 from myProfiles.forms import SubmitUrlForm, SupportRequestForm
 
 def home(request):
@@ -147,6 +147,7 @@ def profile_detail(request, username=None, public_profile_field=None,
     # context['project_form'] = UserProjectForm(instance=project)
     context['url_form'] = SubmitUrlForm()
     context['project'] = project
+    context['images'] = UserImages.objects.get(pk=user.pk)
     context['support'] = UserSupport.objects.get(pk=user.pk)
     context['basic_support_services'] = ['Weekly Backups', 'Monthly Security Updates', 'Quarterly Software Updates']
 

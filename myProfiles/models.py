@@ -25,7 +25,7 @@ class UserProfile(models.Model):
 	current_balance = models.DecimalField(default=0.00,blank=True,max_digits=6,decimal_places=2)
 	balance_due_date = models.DateField(blank=True, null=True)
 	public = models.BooleanField(default=False,blank=True)
-	notes = models.TextField(default='',blank=True,max_length=400)
+	notes = models.TextField(default='',blank=True,max_length=400)	
 
 	# user_profile_placeholder = PlaceholderField('user_profile_placeholder')
 
@@ -59,12 +59,27 @@ class UserProfile(models.Model):
 	user_registered.connect(user_registered_callback)
 
 class UserImages(models.Model):
-	user = models.ForeignKey(UserProfile, unique=True, related_name='images')
+	user = models.ForeignKey(UserProfile, related_name='images')
 	user_image = models.ImageField(upload_to = "images/uploads/", null = True, blank = True)
+	logo = models.ImageField(upload_to = "images/uploads/", null = True, blank = True)
 
 	class Meta:
 		verbose_name = _('user image')
 		verbose_name_plural = _('user images')
+
+	def __unicode__(self):
+		return(self.user.user.username)
+
+	def __str__(self):
+		return(self.user.user.username)
+
+class UserFiles(models.Model):
+	user = models.ForeignKey(UserProfile, related_name='files')
+	user_file = models.FileField(upload_to = "images/uploads/")
+
+	class Meta:
+		verbose_name = _('user file')
+		verbose_name_plural = _('user files')
 
 	def __unicode__(self):
 		return(self.user.user.username)

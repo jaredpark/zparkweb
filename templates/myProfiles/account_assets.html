@@ -1,0 +1,33 @@
+{% load cms_tags %}
+
+<div class='account_table'>
+	<section class='row'>
+		<div class='half_col col emphasis'>Logo</div>
+		<div class='half_col col last'>
+			{% if images.logo %}
+			<img src='{{images.logo}}' alt='Logo' style='max-height: 50px'>
+			{% else %}
+			No logo uploaded
+			{% endif %}
+		</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Photos</div>
+		<div class='half_col col last'>
+			<a>Upload a photo asset</a>
+		</div>
+	</section>
+	<section class='row'>
+		<div class='half_col col emphasis'>Files</div>
+		<div class='half_col col last'>
+			<a>Upload a file asset</a>
+		</div>
+	</section>
+</div>
+
+<script>
+//alert on delete
+function confirm_alert(node) {
+    return confirm("You are about to permanently delete a URL from your design ideas. Click OK to continue or CANCEL to quit.");
+}
+</script>

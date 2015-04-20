@@ -33,38 +33,35 @@
 			<li role="presentation">
 				<a href="#tab3" data-toggle='tab' aria-controls='tab3' aria-expanded='false'>Current Project</a>
 			</li>
-			{% comment %}
 			<li role="presentation">
-				<a href="#tab4" data-toggle='tab' aria-controls='tab4' aria-expanded='false'>Features</a>
+				<a href="#tab4" data-toggle='tab' aria-controls='tab4' aria-expanded='false'>Assets</a>
 			</li>
-			{% endcomment %}
 			<li role="presentation">
 				<a href="#tab5" data-toggle='tab' aria-controls='tab5' aria-expanded='false'>Support</a>
 			</li>
 		</ul>
 		<div id='account-tab-content' class='tab-content'>
 			<div role='tabpanel' class='tab-pane fade in active' id='tab1' aria-labelledby='tab1-tab'>
-				<h3 style='text-align:center;'>{{profile.company}} Home</h3>
+				<h3 style='text-align:center;'>Home</h3>
 				{% include 'myProfiles/account_profile.html' %}
 				<a class='btn blue_btn' href='{% url 'profiles_edit_profile' %}'>Edit Your Profile</a>
 			</div>
 			<div role='tabpanel' class='tab-pane fade' id='tab2' aria-labelledby='tab2-tab'>
-				<h3 style='text-align:center;'>{{profile.company}} Account</h3>
+				<h3 style='text-align:center;'>Account</h3>
 				{% include 'myProfiles/account_details.html' %}
 			</div>
 			<div role='tabpanel' class='tab-pane fade' id='tab3' aria-labelledby='tab3-tab'>
-				<h3 style='text-align:center;'>{{profile.company}} Current Project</h3>
+				<h3 style='text-align:center;'>Current Project</h3>
 				{% include 'myProfiles/current_project.html' %}
 			</div>
-			{% comment %} release in the future; a section that lists all features that a customer has onsite, with the ability
-			to request updates/upgrades to current features or request new features be added from a dropdown of options
+			{# release in the future; a section that lists all features that a customer has onsite, with the ability #}
+			{# to request updates/upgrades to current features or request new features be added from a dropdown of options #}
 			<div role='tabpanel' class='tab-pane fade' id='tab4' aria-labelledby='tab4-tab'>
-				<h3 style='text-align:center;'>{{profile.company}} Features</h3>
-				{% include 'myProfiles/account_features.html' %}
+				<h3 style='text-align:center;'>Assets</h3>
+				{% include 'myProfiles/account_assets.html' %}
 			</div>
-			{% endcomment %}
 			<div role='tabpanel' class='tab-pane fade' id='tab5' aria-labelledby='tab5-tab'>
-				<h3 style='text-align:center;'>{{profile.company}} Support</h3>
+				<h3 style='text-align:center;'>Support</h3>
 				{% include 'myProfiles/account_support.html' %}
 			</div>
 		</div>
